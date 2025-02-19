@@ -1,0 +1,389 @@
+config-file-header
+DIPI-CSW
+v4.1.0.72 / RLSB4.1_951_021_028
+CLI v1.0
+file SSD indicator excluded
+@
+!
+unit-type-control-start 
+unit-type unit 1 network gi uplink none 
+unit-type-control-end 
+!
+port jumbo-frame
+vlan database
+vlan 10,16 
+exit
+voice vlan id 16 
+voice vlan state auto-triggered 
+voice vlan oui-table add 0001e3 Siemens_AG_phone
+voice vlan oui-table add 00036b Cisco_phone
+voice vlan oui-table add 00096e Avaya
+voice vlan oui-table add 000fe2 H3C_Aolynk
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone
+voice vlan oui-table add 00e075 Polycom/Veritel_phone
+voice vlan oui-table add 00e0bb 3Com_phone
+ip dhcp relay address 192.16.62.10
+ip dhcp relay enable
+bonjour interface range vlan 1
+hostname DIPI-CSW
+username dipi_admin password encrypted $15$hEX9PX5AfISdS5K4$WwcFXCiV3+7JvuSiATEIhsPeG1b0Tw4JvP0N8o7nEGeHSVEQ1HaCYUmfvJ2WbO6pmrwym2q3BufjxcuJOrWB+g== privilege 15 
+!
+interface vlan 1
+ name DIPI_NETWORK 
+ ip address 192.16.63.10 255.255.255.0 
+ no ip address dhcp 
+!
+interface vlan 10
+ name DIPI_MGMT 
+ ip address 192.16.61.10 255.255.255.0 
+!
+interface vlan 16
+ name DIPI_VOICE 
+ ip address 192.16.62.1 255.255.255.0 
+ ip dhcp relay enable 
+!
+interface GigabitEthernet1
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet2
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet3
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet4
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet5
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet6
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet7
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet8
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet9
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet10
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet11
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet12
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet13
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet14
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet15
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet16
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet17
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet18
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet19
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet20
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet21
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet22
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet23
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet24
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet25
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet26
+ switchport general pvid 16 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet27
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet28
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet29
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet30
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet31
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet32
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet33
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet34
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet35
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet36
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet37
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet38
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet39
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet40
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet41
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet42
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet43
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet44
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet45
+ switchport access vlan 16 
+!
+interface GigabitEthernet46
+ switchport mode trunk 
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet48
+ switchport general allowed vlan add 16 tagged 
+ switchport general allowed vlan add 1 untagged 
+ switchport trunk native vlan none 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet49
+ switchport mode trunk 
+ switchport trunk native vlan 10 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet50
+ switchport mode trunk 
+ switchport trunk native vlan 10 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet51
+ switchport mode trunk       
+ switchport trunk native vlan 10 
+ switchport trunk allowed vlan 1,10,16 
+!
+interface GigabitEthernet52
+ switchport mode trunk 
+ switchport trunk native vlan 10 
+ switchport trunk allowed vlan 1,10,16 
+!
+exit
+ip helper-address 192.16.62.1 192.16.62.10 7 
+ip route 0.0.0.0 /0 192.16.63.203 metric 1 
